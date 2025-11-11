@@ -548,6 +548,8 @@ button[type="submit"] {
     gap: 40px;
     margin-bottom: 40px;
 }
+
+
 .contact-map-section {
     margin-top: 40px;
 }
@@ -856,3 +858,164 @@ button[type="submit"] {
 }
 
 /* Forzar redeploy */
+
+/* Contact info alignment fix */
+.contact-item {
+    display: flex;
+    align-items: center; /* centra verticalmente */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-item-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.contact-item-icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.contact-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-item-text h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0 0 4px;
+}
+
+.contact-item-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* 🔹 Contact LinkedIn clickable link + visual style */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: scale(1.03);
+}
+
+/* 🔹 LinkedIn icon (imagen PNG o SVG) */
+.contact-item-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-link:hover .contact-item-icon img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+/* 🔹 Texto del LinkedIn */
+.contact-item-text h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.contact-item-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* 🔹 Link dentro del texto (por compatibilidad futura) */
+.contact-item-text a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.contact-item-text a:hover {
+    color: #ff8a00;
+    text-decoration: underline;
+}
+
+/* === Hover brillante para todos los items de contacto === */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse (igual al de LinkedIn) */
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Que el ícono también brille */
+.contact-item:hover .contact-item-icon {
+    background: linear-gradient(135deg, #ff8a00, #9933ff);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Ajuste del texto en hover */
+.contact-item:hover .contact-item-text h4,
+.contact-item:hover .contact-item-text p {
+    color: #fff;
+}
+
+/* LinkedIn mantiene su funcionalidad de enlace */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.contact-link:hover {
+    transform: scale(1.02);
+}
+
+.contact-item-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-item:hover .contact-item-icon img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+/* === Fix para icono de LinkedIn en contacto === */
+.contact-item-icon img {
+  width: 28px !important;
+  height: 28px !important;
+  object-fit: contain;
+  border-radius: 5px;
+}
