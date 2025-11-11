@@ -238,71 +238,72 @@ Más que un proveedor, somos un aliado en la transformación digital.</p>
         </div>
     </div>
 
-    <!-- CONTACT PAGE -->
-    <div id="contact" class="page">
-        <div class="container">
-            <div class="content-wrapper">
-                <section class="contact-grid">
-                    <div class="contact-form glass">
-                        <h2>Contactanos!</h2>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Nombre completo</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Casilla de contacto</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Titulo</label>
-                                <input type="text" id="subject" name="subject">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mensaje</label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <button type="submit" class="cta-button">Send Message</button>
-                        </form>
-                    </div>
+     <!-- CONTACT PAGE -->
+<div id="contact" class="page">
+  <div class="container">
+    <div class="content-wrapper">
+      <section class="contact-grid">
+        <div class="contact-form glass">
+          <h2>¡Contactanos!</h2>
 
-                    <div class="contact-info glass">
-                        <h2>Contact Information</h2>
-                        
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📧</div>
-                            <div class="contact-item-text">
-                                <h4>Email</h4>
-                                <p>info@oncloudsolutions.net</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📍</div>
-                            <div class="contact-item-text">
-                                <h4>Localizacion</h4>
-                                <p>Montevideo, Uruguay</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon">🕒</div>
-                            <div class="contact-item-text">
-                                <h4>Horario</h4>
-                                <p>Lun-Vier: 9AM-6PM<br></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                
-                            </div>
-                        </div>
-                    </div>
-                </section>
+          <!-- 🔹 FORMULARIO FUNCIONAL -->
+          <form action="https://formspree.io/f/mzzybkao" method="POST" onsubmit="alert('¡Gracias por contactarte con OnCloud Solutions!');">
+            <div class="form-group">
+              <label for="name">Nombre completo</label>
+              <input type="text" id="name" name="name" required>
             </div>
+
+            <div class="form-group">
+              <label for="email">Casilla de contacto</label>
+              <input type="email" id="email" name="_replyto" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Título</label>
+              <input type="text" id="subject" name="subject">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="cta-button">Enviar mensaje</button>
+          </form>
         </div>
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="contact-info glass">
+          <h2>Información de contacto</h2>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <p>info@oncloudsolutions.net</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <h4>Ubicación</h4>
+              <p>Montevideo, Uruguay</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🕒</div>
+            <div class="contact-item-text">
+              <h4>Horario</h4>
+              <p>Lun - Vie: 9AM - 6PM</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+  </div>
+</div>
 
     <!-- SINGLE FOOTER -->
     <div id="footer">
@@ -326,4 +327,5 @@ Más que un proveedor, somos un aliado en la transformación digital.</p>
     </div>
 <script src="templatemo-glossy-touch.js"></script>
 </body>
+
 </html>
