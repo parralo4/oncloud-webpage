@@ -329,19 +329,15 @@ Más que un proveedor, somos un aliado en la transformación digital.</p>
           <h2>¡Contactanos!</h2>
 
           <!-- 🔹 FORMULARIO FUNCIONAL -->
-          <form action="https://formspree.io/f/mzzybkao"
-      method="POST"
-      id="contact-form"
-      data-domain="oncloudsolutions.net">
-
+          <form action="https://formspree.io/f/mzzybkao" method="POST">
   <div class="form-group">
     <label for="name">Nombre completo</label>
     <input type="text" id="name" name="name" required>
   </div>
 
   <div class="form-group">
-    <label for="_replyto">Casilla de contacto</label>
-    <input type="email" id="_replyto" name="_replyto" required>
+    <label for="email">Casilla de contacto</label>
+    <input type="email" id="email" name="email" required>
   </div>
 
   <div class="form-group">
@@ -351,6 +347,7 @@ Más que un proveedor, somos un aliado en la transformación digital.</p>
 
   <button type="submit" class="cta-button">Enviar mensaje</button>
 </form>
+
 
         </div>
 
@@ -426,34 +423,6 @@ Más que un proveedor, somos un aliado en la transformación digital.</p>
         </div>
     </div>
 <script src="templatemo-glossy-touch.js"></script>
-
-<script>
-  const form = document.getElementById('contact-form');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries()); // convierte a objeto JSON
-
-    const response = await fetch(form.action, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    if (response.ok) {
-      alert("✅ Gracias por contactarte con OnCloud Solutions. ¡Te responderemos a la brevedad!");
-      form.reset();
-    } else {
-      alert("⚠️ Ocurrió un error al enviar el mensaje. Por favor, intentá nuevamente.");
-    }
-  });
-</script>
-
 
 </body>
 
