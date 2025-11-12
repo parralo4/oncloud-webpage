@@ -1172,3 +1172,13 @@ button[type="submit"] {
   transform: translateY(-4px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
+
+/* === Uniformidad visual de los efectos glass === */
+.glass,
+nav.glass,
+.section-intro.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
