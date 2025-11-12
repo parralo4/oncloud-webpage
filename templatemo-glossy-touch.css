@@ -259,10 +259,12 @@ nav.glass {
 
 /* Page system */
 .page {
-    display: none;
-    min-height: 100vh;
-    padding: 40px 20px 20px;
+  display: none;
+  min-height: 100vh;
+  padding: 5px 20px 40px; /* 🔹 menos espacio arriba */
 }
+
+
 .page.active {
     display: block;
 }
@@ -1025,10 +1027,11 @@ button[type="submit"] {
    ======================= */
 
 #partners {
-  padding: 60px 20px;
+    padding: 5px 20px 60px; /* 🔹 antes 60px 20px — reduce el espacio superior */
   color: white;
   text-align: center;
-  background: transparent; /* sin contenedor */
+  background: transparent;
+  margin-top: 0; /* 🔹 elimina posibles márgenes adicionales */
 }
 
 /* Título */
@@ -1119,3 +1122,53 @@ button[type="submit"] {
   }
 }
 
+
+/* === Secciones sin tarjeta (Servicios y Partners) === */
+.section-intro {
+  text-align: center;
+  margin: 25px auto 30px; /* 🔹 menos margen superior */
+  max-width: 950px;
+  color: white;
+  padding: 0 15px;
+}
+
+.section-intro h2 {
+  font-size: 3.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.section-intro p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* 🔹 Ajuste de espaciado debajo del título para las grillas */
+.services-grid,
+.partners-grid,
+#partners .services-grid {
+  margin-top: 20px !important;
+}
+
+/* === Efecto glass para títulos de secciones === */
+.section-intro.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+}
+
+.section-intro.glass:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
