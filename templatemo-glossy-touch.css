@@ -1182,3 +1182,87 @@ nav.glass,
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
+
+
+/* === Zoom suave para TODAS las tarjetas === */
+.feature-card,
+.service-card,
+.team-member,
+.stat-card,
+.contact-item {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.team-member:hover,
+.stat-card:hover,
+.contact-item:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* === Animación en cadena (staggered) para TODAS === */
+.feature-card,
+.service-card,
+.team-member,
+.stat-card {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: chainAppear 0.9s ease forwards;
+}
+
+/* Delays para efecto cadena */
+.feature-card:nth-child(1),
+.service-card:nth-child(1),
+.team-member:nth-child(1),
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+
+.feature-card:nth-child(2),
+.service-card:nth-child(2),
+.team-member:nth-child(2),
+.stat-card:nth-child(2) { animation-delay: 0.25s; }
+
+.feature-card:nth-child(3),
+.service-card:nth-child(3),
+.team-member:nth-child(3),
+.stat-card:nth-child(3) { animation-delay: 0.4s; }
+
+.feature-card:nth-child(4),
+.service-card:nth-child(4),
+.team-member:nth-child(4),
+.stat-card:nth-child(4) { animation-delay: 0.55s; }
+
+.feature-card:nth-child(5),
+.service-card:nth-child(5),
+.team-member:nth-child(5),
+.stat-card:nth-child(5) { animation-delay: 0.7s; }
+
+@keyframes chainAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* === Zoom + iluminación para los títulos principales (SERVICIOS / PARTNERS) === */
+.section-intro.glass {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.section-intro.glass:hover {
+    transform: scale(1.03) translateY(-4px);
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.30);
+}
+
+
+.section-intro.glass {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: chainAppear 0.9s ease forwards;
+    animation-delay: 0.05s;
+}
+
+
