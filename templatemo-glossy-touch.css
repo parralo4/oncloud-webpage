@@ -1246,23 +1246,30 @@ nav.glass,
 }
 
 
-/* === Zoom + iluminación para los títulos principales (SERVICIOS / PARTNERS) === */
-.section-intro.glass {
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+/* =============================================
+   🔥 UNIFICAR TIEMPOS DE TRANSICIÓN EN TODAS
+   ============================================= */
+
+.glass,
+.section-intro.glass,
+.feature-card,
+.service-card,
+.stat-card,
+.team-member {
+    transition: 
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
 }
 
-.section-intro.glass:hover {
-    transform: scale(1.03) translateY(-4px);
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.30);
+/* Hover idéntico al hero */
+.section-intro.glass:hover,
+.feature-card:hover,
+.service-card:hover,
+.stat-card:hover,
+.team-member:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15) !important;
 }
-
-
-.section-intro.glass {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: chainAppear 0.9s ease forwards;
-    animation-delay: 0.05s;
-}
-
 
