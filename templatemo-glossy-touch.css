@@ -1273,3 +1273,25 @@ nav.glass,
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15) !important;
 }
 
+.form-success {
+  background: rgba(0, 255, 140, 0.15);
+  border: 2px solid #00c96b;
+  color: #00e67a;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(0, 255, 140, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.form-success.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden { display: none; }
